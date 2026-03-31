@@ -1,0 +1,85 @@
+#projects {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 24px; 
+    
+    background-color: var(--gray-500);
+    background-size: cover;
+    background-position: center;
+}
+
+#projects #header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#projects #header .subtitle {
+    margin: 30px;
+    font: var(--subtitle);
+    color: var(--red);
+    display: block;
+    margin-bottom: 8px;
+    margin-top: 72px;
+}
+
+#projects #header .title-md {
+    font: var(--title-md);
+    color: var(--gray-100);
+}
+
+#projects #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+    margin-top: 56px;
+}
+
+#projects figure {
+    background-color: var(--gray-400);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    text-align: left; 
+}
+
+#projects figure:hover {
+    border-color: var(--blue);
+    transform: translateY(-8px);
+}
+
+#projects figure img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9; 
+}
+
+#projects figure span {
+    display: block;
+    font: var(--title-sm);
+    color: var(--gray-100);
+    margin: 16px 0 8px;
+}
+
+#projects figure p {
+    font: var(--text-sm);
+    color: var(--gray-300);
+}
+
+@media (max-width: 900px) {
+    #projects #grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 600px) {
+    #projects #grid {
+        grid-template-columns: 1fr;
+    }
+}
