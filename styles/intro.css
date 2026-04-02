@@ -7,7 +7,7 @@
     text-align: center;
     padding: 0 24px;
     
-    background: url('/assets/images/Background_Intro.png');
+    background: url('../assets/images/Background_Intro.png');
     background-size: cover;
     background-position: center;
 }
