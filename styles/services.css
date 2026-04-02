@@ -1,0 +1,85 @@
+#services {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 88px 24px 20px;    
+    background: linear-gradient(180deg, rgba(9, 9, 10, 0.4) 0%, #0D0E11 100%), var(--gray-600);
+}
+
+#services .section-header {
+    text-align: center;
+    margin-bottom: 64px; 
+}
+
+#services .subtitle {
+    font: var(--subtitle);
+    color: var(--red); 
+    display: block;
+    gap: 8px;
+}
+
+#services .title-md {
+    font: var(--title-md);
+    color: var(--gray-100);
+}
+
+#services #grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 24px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.card {
+    background-color: var(--gray-600);
+    border: 1px solid var(--gray-400); 
+    
+    padding: 32px; 
+    border-radius: 12px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 24px; 
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    background-color: var(--gray-400); 
+}
+
+.card img {
+    width: 44px;
+    height: 44px;
+}
+
+.card.websites img {
+    filter: invert(57%) sepia(87%) saturate(541%) hue-rotate(222deg) brightness(96%) contrast(91%);
+}
+
+.card.api img {
+    filter: invert(74%) sepia(61%) saturate(531%) hue-rotate(338deg) brightness(101%) contrast(101%);
+}
+
+
+.card.devops img {
+    filter: invert(65%) sepia(57%) saturate(415%) hue-rotate(44deg) brightness(93%) contrast(91%);
+}
+
+
+.card .title {
+    font: var(--title-sm); 
+    color: var(--gray-100);
+}
+
+.card .description {
+    font: var(--text-sm);
+    color: var(--gray-300);
+    line-height: 140%;
+}
+
+@media (max-width: 900px) {
+    #services #grid { grid-template-columns: 1fr; max-width: 400px; }
+}
